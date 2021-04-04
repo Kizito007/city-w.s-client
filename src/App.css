@@ -1,20 +1,28 @@
-.App {
-  text-align: center;
-}
-.bg-light {
-  background-color: #3a3c3e;
-}
 .navbar-light .navbar-brand{
-  color: #232222fa;
+  color: #efececfa;
   margin-right: 10%;
   padding: 20px;
 }
 .navbar-nav .dropdown-menu {
   width: 0px;
 }
+.navbar-light .navbar-toggler {
+  color: #fff;
+  border-radius: 11px;
+  background: #c1bcbc;
+}
 .navbar-light .navbar-nav .nav-link {
-  color: #232222fa;
+  color: #d6d2d2fa;
   margin-right: 40px;
+}
+.carousel {
+  margin: 5% 5%;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  display: none;
+}
+.carousel-inner {
+  border-radius: 20px;
 }
 .navbar-nav .dropdown-menu {
   position: static;
@@ -45,5 +53,11 @@
     border-radius: 20px;
     padding: 5px;
     position: absolute;
+  }
+}
+@media (min-width: 780px){
+  .carousel {
+    margin-left: 17%;
+    width: 65%;
   }
 }
