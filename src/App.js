@@ -6,7 +6,7 @@ import Home from "./components/pages/Home"
 
 function App() {
   return (
-    <div style={{ background: "#626465" }}>
+    <div style={{ background: "#626465", color: "#e2eef9" }}>
       <Header />
       <Home />
       <Footer />
