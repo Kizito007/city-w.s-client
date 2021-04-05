@@ -27,7 +27,7 @@ const Footer = () => {
 
             <div className="footer-bottom">
                 <h4> City Wide Stores </h4> <br/>
-                <p> All Rights reserved by City-Wide-Stores &copy; 2021 </p>
+                <p> All Rights reserved by City-Wide-Stores <br/> &copy; 2021 </p>
             </div>
         </footer>
     )

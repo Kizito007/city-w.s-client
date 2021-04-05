@@ -71,6 +71,9 @@ i-cards {
 .h5, h5 {
   font-size: 1.1rem;
 }
+.col {
+  margin: 10px 0;
+}
 @media (min-width: 992px){
   .navbar-expand-lg .navbar-nav .dropdown-menu {
     border-radius: 20px;
