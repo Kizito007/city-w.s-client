@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import Axios from "axios"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import Header from "./components/layout/Header.jsx"
@@ -16,32 +17,32 @@ function App() {
     user: undefined,
   })
 
-  // useEffect(() => {
-  //   const checkLoggedIn = async () => {
-  //     let token = localStorage.getItem("auth-token");
-  //     if (token === null) {
-  //       localStorage.setItem("auth-token", "");
-  //       token = "" ;
-  //     } 
+  useEffect(() => {
+    const checkLoggedIn = async () => {
+      let token = localStorage.getItem("auth-token");
+      if (token === null) {
+        localStorage.setItem("auth-token", "");
+        token = "" ;
+      } 
 
-  //     const tokenRes = await Axios.post(
-  //       "http://localhost:3003/v1/users/tokenIsValid", null,
-  //       {
-  //         headers: { "x-auth-token": token }
-  //       }
-  //     );
-  //     if (tokenRes.data) {
-  //       const userRes = await Axios.get(`http://localhost:3003/v1/users`, {
-  //         headers: { "x-auth-token": token }
-  //       })
-  //       setUserData({
-  //         token,
-  //         user: userRes.data
-  //       })
-  //     }
-  //   }
-  //   checkLoggedIn();
-  // }, [])
+      const tokenRes = await Axios.post(
+        "http://localhost:3003/v1/users/tokenIsValid", null,
+        {
+          headers: { "x-auth-token": token }
+        }
+      );
+      if (tokenRes.data) {
+        const userRes = await Axios.get(`http://localhost:3003/v1/users`, {
+          headers: { "x-auth-token": token }
+        })
+        setUserData({
+          token,
+          user: userRes.data
+        })
+      }
+    }
+    checkLoggedIn();
+  }, [])
 
   return (
     <Router>
