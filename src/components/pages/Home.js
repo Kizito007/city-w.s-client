@@ -42,13 +42,13 @@ const Home = () => {
             <h4 style={{ margin: "0 5%", color: "#e2ecf5" }}> Featured Products </h4> <br/>
             <div style={{ margin: "0 5%", color: "#29292b" }} className="i-cards">
                 <h4> Iphone Case Categories </h4> <br/>
-                <Container>
-                    <Row>
+                <Container fluid>
+                    <Row >
                         <Col>
-                            <Card style={{ width: '8rem' }}>
+                            <Card className="res-card">
                                 <Card.Img variant="top" src={case2} />
                                 <Card.Body>
-                                    <Card.Title>Iphone 6</Card.Title>
+                                    <Card.Title>Iphone 6 Series</Card.Title>
                                     {/* <Card.Text>
                                     Some quick example text to build on the card title and make up the bulk of
                                     the card's content.
@@ -58,46 +58,55 @@ const Home = () => {
                             </Card>
                         </Col>
                         <Col>
-                            <Card style={{ width: '8rem' }}>
+                            <Card className="res-card">
                                 <Card.Img variant="top" src={case2} />
                                 <Card.Body>
-                                    <Card.Title>Iphone 6</Card.Title>
+                                    <Card.Title>Iphone 7 Series</Card.Title>
                                     <Button variant="primary">View</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
                         <Col>
-                            <Card style={{ width: '8rem' }}>
+                            <Card className="res-card">
                                 <Card.Img variant="top" src={case2} />
                                 <Card.Body>
-                                    <Card.Title>Iphone 6</Card.Title>
+                                    <Card.Title>Iphone 8 Series</Card.Title>
                                     <Button variant="primary">View</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
                         <Col>
-                            <Card style={{ width: '8rem' }}>
+                            <Card className="res-card">
                                 <Card.Img variant="top" src={case2} />
                                 <Card.Body>
-                                    <Card.Title>Iphone 6</Card.Title>
+                                    <Card.Title>Iphone X Series</Card.Title>
                                     <Button variant="primary">View</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
                         <Col>
-                            <Card style={{ width: '8rem' }}>
+                            <Card className="res-card">
                                 <Card.Img variant="top" src={case2} />
                                 <Card.Body>
-                                    <Card.Title>Iphone 6</Card.Title>
+                                    <Card.Title>Iphone 11 Series</Card.Title>
                                     <Button variant="primary">View</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
                         <Col>
-                            <Card style={{ width: '8rem' }}>
+                            <Card className="res-card">
                                 <Card.Img variant="top" src={case2} />
                                 <Card.Body>
-                                    <Card.Title>Iphone 6</Card.Title>
+                                    <Card.Title>Iphone 12 Series</Card.Title>
+                                    <Button variant="primary">View</Button>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                        <Col>
+                            <Card className="res-card">
+                                <Card.Img variant="top" src={case2} />
+                                <Card.Body>
+                                    <Card.Title>Iphone Universal Pouches</Card.Title>
                                     <Button variant="primary">View</Button>
                                 </Card.Body>
                             </Card>
