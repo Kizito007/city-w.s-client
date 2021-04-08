@@ -47,12 +47,13 @@ textarea {
     font-size: 1.1rem;
 }
 .reg-link {
-    color: #96d123;
+    color: #42cdec;
     text-decoration: none;
     font-size: 1.1rem;
 }
 .reg-link:hover {
-    color: #486e36;
+    color: #31b4d1;
+    text-decoration: none;
 }
 .form input:focus {
     border: 1px solid rgb(38, 228, 187);

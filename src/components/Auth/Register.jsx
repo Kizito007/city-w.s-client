@@ -1,8 +1,10 @@
 import React, { useState, useContext } from "react"
+import { Form, Button } from "react-bootstrap"
 import UserContext from "../context/UserContext"
 import { useHistory } from "react-router-dom"
 import Spinner from "../Misc/Spinner"
 import "./auth.css"
+import FormContainer from "./FormContainer"
 // import PhoneInput from "react-phone-number-input"
 import Axios from "axios"
 import ErrorNotice from "../Misc/ErrorNotice"
@@ -53,69 +55,73 @@ export default function Register () {
     }
 
     return (
-        <div className="page">
-            <h2 style={{ padding: '1rem' }}>Register</h2>
+        <FormContainer>
+            <h2 style={{ padding: '1rem' }}>Sign Up</h2>
             {
                 error && <ErrorNotice message={error} clearError={() => setError(undefined)} />
             }
-            <form className="form" onSubmit={submit}>
-                <label htmlFor="register-email">Email </label>
-                <input 
-                    id="register-email" 
-                    type="email" 
-                    required
-                    onChange={e => setEmail(e.target.value)} 
-                />
-
-                <label htmlFor="register-password">Password </label>
-                <input 
-                    id="register-password" 
-                    type="password" 
-                    required
-                    placeholder= "5 characters min."
-                    onChange={e => setPassword(e.target.value)}
-                />
-                <input 
-                    placeholder="Verify Password" 
-                    type="password" 
-                    required
-                    onChange={e => setPasswordCheck(e.target.value)} 
-                />
-
-                <label htmlFor="register-firstName">First Name </label>
-                <input 
-                    id="register-firstName" 
-                    type="text" 
-                    required
-                    onChange={e => setFirstName(e.target.value)} 
-                />
-                <label htmlFor="register-lastName">Last Name </label>
-                <input 
-                    id="register-lastName" 
-                    type="text" 
-                    required
-                    onChange={e => setLastName(e.target.value)} 
-                />
-                {/* <PhoneInput 
-                    defaultCountry="NG"
-                    value={cell_no} 
-                    placeholder="Enter mobile number"
-                    onChange={setMobileNumber} 
-                /> */}
-                <label htmlFor="gender">Gender </label>
-                <input 
-                    id="gender" 
-                    type="text" 
-                    onChange={e => setGender(e.target.value)} 
-                />
+            <Form onSubmit={submit} style={{height: "100vh"}}>
+                <Form.Group controlId="email">
+                    <Form.Label> Email Address </Form.Label>
+                    <Form.Control
+                        type="email"
+                        placeholder="Enter email"
+                        onChange={e => setEmail(e.target.value)}
+                    ></Form.Control>
+                </Form.Group>
+                <Form.Group controlId="password">
+                    <Form.Label> Password </Form.Label>
+                    <Form.Control
+                        type="password"
+                        placeholder="Enter password"
+                        onChange={e => setPassword(e.target.value)}
+                    ></Form.Control>
+                </Form.Group>             
+                <Form.Group controlId="passwordCheck">
+                    <Form.Label> Verify Password </Form.Label>
+                    <Form.Control
+                        type="password"
+                        placeholder="Confirm password"
+                        required
+                        onChange={e => setPasswordCheck(e.target.value)}
+                    ></Form.Control>
+                </Form.Group>             
+                <Form.Group controlId="firstName">
+                    <Form.Label> First Name </Form.Label>
+                    <Form.Control
+                        type="text"
+                        placeholder="John"
+                        required
+                        onChange={e => setFirstName(e.target.value)}
+                    ></Form.Control>
+                </Form.Group>             
+                <Form.Group controlId="lastName">
+                    <Form.Label> Last Name </Form.Label>
+                    <Form.Control
+                        type="text"
+                        placeholder="Doe"
+                        required
+                        onChange={e => setLastName(e.target.value)}
+                    ></Form.Control>
+                </Form.Group>             
+                <Form.Group controlId="gender">
+                    <Form.Label> Gender </Form.Label>
+                    <Form.Control
+                        type="text"
+                        // placeholder=""
+                        onChange={e => setGender(e.target.value)}
+                    ></Form.Control>
+                </Form.Group>             
                 {
                     isLoading ?
                     <>
                         <span> <Spinner/> </span> <br/>
                     </> : null
                 }
-                <input type="submit" value="Sign Up" />
-            </form>
-        </div>
+                <Button type="submit" variant="secondary">
+                    Sign Up
+                </Button>
+            </Form>
+        </FormContainer>
     )
 }
