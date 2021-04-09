@@ -47,7 +47,7 @@ function App() {
   return (
     <Router>
       <UserContext.Provider value={{ userData, setUserData }}>
-        <div style={{ background: "#626465", color: "#e2eef9" }}>
+        <div style={{ background: "#626465", color: "#d5e1ec" }}>
           <Header />
           <Switch>
             <Route exact path="/" component={Home} />
