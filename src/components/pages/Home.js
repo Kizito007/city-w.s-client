@@ -10,9 +10,8 @@ const Home = () => {
                 <div className="textbox">
                     <h1> Our Beautiful Products </h1>
                     <p>
-                    Bacon ipsum dolor amet short loin strip steak leberkas ribeye beef pork loin pork belly drumstick
-                    frankfurter. Corned beef ball tip pork belly pig sirloin, ham hock chuck cow fatback strip steak
-                    meatloaf.
+                        Order your Iphone Cases and Ringlights from one of your most trusted stores on the internet
+                        and prepare for it to be safely delivered to your doorstep.
                     </p>
                     {/* <a href="#">View More</a> */}
                 </div>
@@ -128,7 +127,7 @@ const Home = () => {
                     </Row>
                     
                 </Container>                     
-                <h4> Ringlights Slides </h4>
+                <h4> Ringlights </h4>
             </div>
         </>
     )
