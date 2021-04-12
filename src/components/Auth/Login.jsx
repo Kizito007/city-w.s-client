@@ -44,7 +44,7 @@ export default function Login () {
     }
     return (
         <FormContainer>
-            <h2 style={{ padding: '1rem' }}>Sign In</h2>
+            <h3 style={{ padding: '1rem' }}>Sign In</h3>
             {
                 error && <ErrorNotice message={error} clearError={() => setError(undefined)} />
             }

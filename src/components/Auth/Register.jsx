@@ -48,7 +48,7 @@ export default function Register () {
             });
             setLoading(false)
             localStorage.setItem("auth-token", loginRes.data.token)
-            history.push("/profile")  
+            history.push("/")  
         } catch (err) {
             err.response.data.msg && setError(err.response.data.msg); 
         }
@@ -56,7 +56,7 @@ export default function Register () {
 
     return (
         <FormContainer>
-            <h2 style={{ padding: '1rem' }}>Sign Up</h2>
+            <h3 style={{ padding: '1rem' }}>Sign Up</h3>
             {
                 error && <ErrorNotice message={error} clearError={() => setError(undefined)} />
             }

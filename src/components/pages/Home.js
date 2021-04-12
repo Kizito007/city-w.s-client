@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <>
             <div className="banner">
-                <div className="textbox">
+                <div className="textbox" id="home">
                     <h1> Our Beautiful Products </h1>
                     <p>
                         Order your Iphone Cases and Ringlights from one of your most trusted stores on the internet

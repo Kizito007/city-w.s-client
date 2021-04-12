@@ -32,6 +32,17 @@ const Header = () => {
         localStorage.setItem("auth-token", "")
     };
 
+    let role;
+    let right = false;
+
+    if (userDetails) {
+        role = userDetails.role;
+    }
+
+    if (role === "admin" && role === "boss") {
+        right = true;
+    }
+
     return <header>
         <Navbar bg="dark" expand="lg" className="color-nav">
         <Navbar.Brand href="#home">City-Wide Stores</Navbar.Brand>
@@ -42,6 +53,12 @@ const Header = () => {
             <NavDropdown title="Categories" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Iphone Cases</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Ringlights</NavDropdown.Item>
+                {
+                    right === false ? <>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="/icase/create">New I-Case</NavDropdown.Item>
+                    <NavDropdown.Item href="/ringlight/create">New Ringlight</NavDropdown.Item> </> : null
+                }
             </NavDropdown>
             {
                 userDetails ?

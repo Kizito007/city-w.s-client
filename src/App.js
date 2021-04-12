@@ -8,6 +8,8 @@ import Footer from "./components/layout/Footer.jsx"
 import Login from "./components/Auth/Login.jsx"
 import Register from "./components/Auth/Register.jsx"
 import Home from "./components/pages/Home"
+import CreateIcase from "./components/Icases/CreateIcase"
+import CreateRinglight from "./components/ringlights/CreateRinglight"
 import UserContext from "./components/context/UserContext"
 
 function App() {
@@ -53,6 +55,8 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
+            <Route exact path="/icase/create" component={CreateIcase} />
+            <Route exact path="/ringlight/create" component={CreateRinglight} />
           </Switch>
           <Footer />
         </div>
