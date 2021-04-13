@@ -2,6 +2,16 @@ import React from "react"
 import { Carousel, Card, Button, Container, Row, Col } from "react-bootstrap"
 import case2 from "../img/case2.jfif"
 import light1 from "../img/light3.jfif"
+import babe1 from "../img/babe.jpg"
+import babe2 from "../img/babe2.JPG"
+import isix from "../img/isix.JPG"
+import isvn from "../img/isvn.JPG"
+import ix from "../img/ix.JPG"
+import iii from "../img/iii.JPG"
+import itw from "../img/itw.JPG"
+import uni from "../img/uni.JPG"
+import iate from "../img/iate.jpg"
+import pouch1 from "../img/pouch1.JPG"
 //Jumbotron, Container
 const Home = () => {
     return (
@@ -41,11 +51,27 @@ const Home = () => {
                             src={light1}
                             alt="Light"
                             />
-
-                            {/* <Carousel.Caption>
-                            <h3>Lights Up</h3>
-                            <p>Beautify the vision with our Ringlights</p>
-                            </Carousel.Caption> */}
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                            className="d-block w-100"
+                            src={babe1}
+                            alt="babe"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                            className="d-block w-100"
+                            src={pouch1}
+                            alt="pouch"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                            className="d-block w-100"
+                            src={babe2}
+                            alt="babe"
+                            />
                         </Carousel.Item>
                     </Carousel>
                 </div>
@@ -59,7 +85,7 @@ const Home = () => {
                     <Row >
                         <Col>
                             <Card className="res-card">
-                                <Card.Img variant="top" src={case2} />
+                                <Card.Img variant="top" src={isix} />
                                 <Card.Body>
                                     <Card.Title>Iphone 6 Series</Card.Title>
                                     {/* <Card.Text>
@@ -72,7 +98,7 @@ const Home = () => {
                         </Col>
                         <Col>
                             <Card className="res-card">
-                                <Card.Img variant="top" src={case2} />
+                                <Card.Img variant="top" src={isvn} />
                                 <Card.Body>
                                     <Card.Title>Iphone 7 Series</Card.Title>
                                     <Button variant="primary">View</Button>
@@ -81,7 +107,7 @@ const Home = () => {
                         </Col>
                         <Col>
                             <Card className="res-card">
-                                <Card.Img variant="top" src={case2} />
+                                <Card.Img variant="top" src={iate} />
                                 <Card.Body>
                                     <Card.Title>Iphone 8 Series</Card.Title>
                                     <Button variant="primary">View</Button>
@@ -90,7 +116,7 @@ const Home = () => {
                         </Col>
                         <Col>
                             <Card className="res-card">
-                                <Card.Img variant="top" src={case2} />
+                                <Card.Img variant="top" src={ix} />
                                 <Card.Body>
                                     <Card.Title>Iphone X Series</Card.Title>
                                     <Button variant="primary">View</Button>
@@ -99,7 +125,7 @@ const Home = () => {
                         </Col>
                         <Col>
                             <Card className="res-card">
-                                <Card.Img variant="top" src={case2} />
+                                <Card.Img variant="top" src={iii} />
                                 <Card.Body>
                                     <Card.Title>Iphone 11 Series</Card.Title>
                                     <Button variant="primary">View</Button>
@@ -108,7 +134,7 @@ const Home = () => {
                         </Col>
                         <Col>
                             <Card className="res-card">
-                                <Card.Img variant="top" src={case2} />
+                                <Card.Img variant="top" src={itw} />
                                 <Card.Body>
                                     <Card.Title>Iphone 12 Series</Card.Title>
                                     <Button variant="primary">View</Button>
@@ -117,7 +143,7 @@ const Home = () => {
                         </Col>
                         <Col>
                             <Card className="res-card">
-                                <Card.Img variant="top" src={case2} />
+                                <Card.Img variant="top" src={uni} />
                                 <Card.Body>
                                     <Card.Title>Universal Pouches</Card.Title>
                                     <Button variant="primary">View</Button>
