@@ -71,7 +71,7 @@ const Header = () => {
             <Nav.Link href="/">Home</Nav.Link>
             <NavDropdown title="Categories" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Iphone Cases</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Ringlights</NavDropdown.Item>
+                <NavDropdown.Item href="/ringlights">Ringlights</NavDropdown.Item>
                 {
                     userDetails ?
                     <>

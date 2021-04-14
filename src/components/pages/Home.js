@@ -1,5 +1,6 @@
 import React from "react"
 import { Carousel, Card, Button, Container, Row, Col } from "react-bootstrap"
+import { Link } from "react-router-dom"
 import case2 from "../img/case2.jfif"
 import light1 from "../img/light3.jfif"
 import babe1 from "../img/babe.jpg"
@@ -168,12 +169,15 @@ const Home = () => {
                     </Row>
                     <p align="right" 
                         style={{
-                            color: "#8ccaff",
                             fontSize: "17px",
                             marginRight: "4%"
                         }} 
                     > 
-                        View More 
+                    <Link to="/ringlights"
+                        style={{ color: "#8ceaff" }}
+                    > 
+                        More Ringlights {`>`} 
+                    </Link>
                     </p>
                 </div>
             </div>
