@@ -12,6 +12,8 @@ import itw from "../img/itw.JPG"
 import uni from "../img/uni.JPG"
 import iate from "../img/iate.jpg"
 import pouch1 from "../img/pouch1.JPG"
+import products from "../products"
+import Product from "../Misc/Product"
 //Jumbotron, Container
 const Home = () => {
     return (
@@ -154,6 +156,26 @@ const Home = () => {
                     
                 </Container>                     
                 <h4> Ringlights </h4>
+                <div>
+                    <Row>
+                        {
+                            products.map((product) => (
+                                <Col sm={12} md={6} lg={4} xl={3}>
+                                    <Product product={product} /> 
+                                </Col>
+                            ))
+                        }
+                    </Row>
+                    <p align="right" 
+                        style={{
+                            color: "#8ccaff",
+                            fontSize: "17px",
+                            marginRight: "4%"
+                        }} 
+                    > 
+                        View More 
+                    </p>
+                </div>
             </div>
         </>
     )

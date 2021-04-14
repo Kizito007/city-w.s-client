@@ -15,7 +15,7 @@ const Footer = () => {
                     <ul className="boxx ul">
                         {/* <h3 style={{fontSize: "1.0rem"}}> Contact </h3>  */}
                         <br/>
-                        <h5> <a href="mailto:remetechnologysolutions@gmail.com" style={{color: "#ea9797", fontSize: "14px" }}> <i> Send Mail <FaIcons.FaTelegram/> </i>  </a> </h5>
+                        <h5> <a href="#" style={{color: "#ea9797", fontSize: "14px" }}> <i> Send Mail <FaIcons.FaTelegram/> </i>  </a> </h5>
                         <br/>
                     </ul>
                 </li>
@@ -23,9 +23,9 @@ const Footer = () => {
                     <h5> Social </h5> <br/>
                     
                     <ul className="boxx">
-                        <li> <a href="https://twitter.com/remetech1"><i style={{ color: "#299bff" }}> <FaIcons.FaTwitter/> </i>Twitter</a> </li> <br/>
-                        <li> <a href="https://instagram.com/remetech1"><i style={{color: "#E1306C"}}> <FaIcons.FaInstagram/> </i>Instagram</a> </li> <br/>
-                        <li> <a href="https://facebook.com/REME-Tech-Solutions-108895890929074"><i style={{ color: "#348dda" }}> <FaIcons.FaFacebook/>  </i>Facebook</a> </li> <br/>
+                        <li> <a href="#"><i style={{ color: "#299bff" }}> <FaIcons.FaTwitter/> </i>Twitter</a> </li> <br/>
+                        <li> <a href="#"><i style={{color: "#E1306C"}}> <FaIcons.FaInstagram/> </i>Instagram</a> </li> <br/>
+                        <li> <a href="#"><i style={{ color: "#348dda" }}> <FaIcons.FaFacebook/>  </i>Facebook</a> </li> <br/>
                     </ul>
                 </li>
             </ul>
