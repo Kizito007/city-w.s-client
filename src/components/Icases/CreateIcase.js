@@ -89,7 +89,7 @@ export default function CreateIcase () {
                 <Form.Group controlId="firstName">
                     <Form.Label> Discount </Form.Label>
                     <Form.Control
-                        type="text"
+                        type="number"
                         placeholder="From 1 - 100"
                         required
                         onChange={e => setDiscount(e.target.value)}
@@ -98,7 +98,7 @@ export default function CreateIcase () {
                 <Form.Group controlId="lastName">
                     <Form.Label> Quantity </Form.Label>
                     <Form.Control
-                        type="text"
+                        type="number"
                         placeholder="Doe"
                         required
                         onChange={e => setQty(e.target.value)}

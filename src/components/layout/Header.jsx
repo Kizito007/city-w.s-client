@@ -10,6 +10,7 @@ const Header = () => {
     // const history = useHistory();
     // const match = useRouteMatch()
     const [userDetails, setUserDetails] = useState({})
+    const [userRole, setUserRole] = useState(false)
 
     useEffect(() => {
         
@@ -32,16 +33,34 @@ const Header = () => {
         localStorage.setItem("auth-token", "")
     };
 
-    let role;
-    let right = false;
+    // useEffect(() => {
+    //     // console.log(userDetails)
 
-    if (userDetails) {
-        role = userDetails.role;
-    }
+    //     if (userDetails) {
+    //         console.log(userDetails.role)
+    //     let role = userDetails.role
 
-    if (role === "admin" && role === "boss") {
-        right = true;
-    }
+    //     if (role === "boss") {
+    //         console.log(role)
+    //         setUserRole(true)
+    //     } else if (role === "admin") {
+    //         console.log(role)
+    //         setUserRole(true)
+    //     } else {
+    //         setUserRole(false)
+    //     }
+    //     }
+    //     console.log(subids);
+    //     if (subids) {
+    //         if (subids.includes(userDetails.id)) { 
+    //             setEnrolled("true");
+    //         } else {
+    //             setEnrolled("false");
+    //         }
+    //     }contentDetails.subscriberids, userDetails.id
+        
+
+    // }, [])
 
     return <header>
         <Navbar bg="dark" expand="lg" className="color-nav">
@@ -54,10 +73,17 @@ const Header = () => {
                 <NavDropdown.Item href="#action/3.1">Iphone Cases</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Ringlights</NavDropdown.Item>
                 {
-                    right === false ? <>
+                    userDetails ?
+                    <>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="/icase/create">New I-Case</NavDropdown.Item>
-                    <NavDropdown.Item href="/ringlight/create">New Ringlight</NavDropdown.Item> </> : null
+                    {
+                        userDetails.role === "boss" || userDetails.role === "admin" ? <>
+                    
+                        <NavDropdown.Item href="/icase/create">New I-Case</NavDropdown.Item>
+                        <NavDropdown.Item href="/ringlight/create">New Ringlight</NavDropdown.Item> </> : null
+                    }
+                        
+                    </> : null          
                 }
             </NavDropdown>
             {
