@@ -1,4 +1,7 @@
 import pic from "./img/light3.jfif"
+import lg from "./img/babe1.jpg"
+import lg1 from "./img/babe.jpg"
+import lg2 from "./img/babe2.JPG"
 
 const products = [
     {
@@ -28,7 +31,8 @@ const products = [
     {
         _id: 3,
         name: "Airpods Wireless Bluetooth Headphones",
-        image: pic,
+        image: [pic, lg, lg1, lg2],
+        colors: ["red", "black", "crimson", "teal"],
         description: "The quick brown fox jumps over the lazy dog",
         brand: "Apple",
         category: "Electronics",

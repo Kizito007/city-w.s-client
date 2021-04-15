@@ -80,7 +80,7 @@ const Header = () => {
                         userDetails.role === "boss" || userDetails.role === "admin" ? <>
                     
                         <NavDropdown.Item href="/icase/create">New I-Case</NavDropdown.Item>
-                        <NavDropdown.Item href="/ringlight/create">New Ringlight</NavDropdown.Item> </> : null
+                        <NavDropdown.Item href="/ringlight">New Ringlight</NavDropdown.Item> </> : null
                     }
                         
                     </> : null          
