@@ -14,42 +14,32 @@ export default function CreateRinglight () {
     const [brand, setBrand] = useState();
     const [price, setPrice] = useState();
     const [discount, setDiscount] = useState();
-    const [arrival, setArrival] = useState();
-    // const [color, setColor] = useState();
     const [qty, setQty] = useState();
-    // const [sale, setSale] = useState();
     const [isLoading, setLoading] = useState(false)
-    // img: { type: String },
+    const [error, setError] = useState();
+    // const [arrival, setArrival] = useState();
+    // const [sale, setSale] = useState();
     // ratings: { type: String },
     // color: { type: String },
-    const [error, setError] = useState();
 
-    const { setUserData } = useContext(UserContext);
+    const { userData } = useContext(UserContext);
     const history = useHistory();
 
     const submit = async (e) => {
+        setLoading(true)
         e.preventDefault();
         try {
-            setLoading(true)
-            // const newIcase = 
-            // {descrp, brand, price, discount, qty};
-            
-            // await Axios.post(
-            //     "http://localhost:3003/v1/users/register", 
-            //     newUser,
-            // );
-            // const loginRes = await Axios.post(
-            //     "http://localhost:3003/v1/users/login", {
-            //     email,
-            //     password,  
-            // });
-            // setUserData({
-            //     token: loginRes.data.token,
-            //     user: loginRes.data.vendor,
-            // });
+            const newRinglight = 
+            { brand, descrp, price, discount, qty };
+            await Axios.post(
+                `http://localhost:3003/v1/ringlights/new`, 
+                newRinglight,
+                {
+                    headers: { "x-auth-token": userData.token }
+                }
+            );
             setLoading(false)
-            // localStorage.setItem("auth-token", loginRes.data.token)
-            history.push("/profile")  
+            history.push("/ringlights")  
         } catch (err) {
             err.response.data.msg && setError(err.response.data.msg); 
         }
@@ -91,7 +81,6 @@ export default function CreateRinglight () {
                     <Form.Control
                         type="number"
                         placeholder="From 1 - 100"
-                        required
                         onChange={e => setDiscount(e.target.value)}
                     ></Form.Control>
                 </Form.Group>             
@@ -99,7 +88,7 @@ export default function CreateRinglight () {
                     <Form.Label> Quantity </Form.Label>
                     <Form.Control
                         type="number"
-                        placeholder="Doe"
+                        placeholder="Count In Stock"
                         required
                         onChange={e => setQty(e.target.value)}
                     ></Form.Control>

@@ -14,42 +14,37 @@ export default function CreateIcase () {
     const [brand, setBrand] = useState();
     const [price, setPrice] = useState();
     const [discount, setDiscount] = useState();
-    const [arrival, setArrival] = useState();
-    // const [color, setColor] = useState();
+    const [iphoneSeries, setIphoneSeries] = useState();
+    //count in stock
     const [qty, setQty] = useState();
-    // const [sale, setSale] = useState();
     const [isLoading, setLoading] = useState(false)
+    const [error, setError] = useState();
+    // const [arrival, setArrival] = useState();
+    // const [color, setColor] = useState();
+    
+    // const [sale, setSale] = useState();
+    
     // img: { type: String },
     // ratings: { type: String },
-    // color: { type: String },
-    const [error, setError] = useState();
 
-    const { setUserData } = useContext(UserContext);
+    const { userData } = useContext(UserContext);
     const history = useHistory();
 
     const submit = async (e) => {
+        setLoading(true)
         e.preventDefault();
         try {
-            setLoading(true)
-            // const newIcase = 
-            // {descrp, brand, price, discount, qty};
-            
-            // await Axios.post(
-            //     "http://localhost:3003/v1/users/register", 
-            //     newUser,
-            // );
-            // const loginRes = await Axios.post(
-            //     "http://localhost:3003/v1/users/login", {
-            //     email,
-            //     password,  
-            // });
-            // setUserData({
-            //     token: loginRes.data.token,
-            //     user: loginRes.data.vendor,
-            // });
+            const newIcase = 
+            { brand, descrp, price, discount, iphoneSeries, qty };
+            await Axios.post(
+                `http://localhost:3003/v1/i-cases/new`, 
+                newIcase,
+                {
+                    headers: { "x-auth-token": userData.token }
+                }
+            );
             setLoading(false)
-            // localStorage.setItem("auth-token", loginRes.data.token)
-            history.push("/profile")  
+            history.push("/icases")  
         } catch (err) {
             err.response.data.msg && setError(err.response.data.msg); 
         }
@@ -81,7 +76,7 @@ export default function CreateIcase () {
                 <Form.Group controlId="passwordCheck">
                     <Form.Label> Price </Form.Label>
                     <Form.Control
-                        type="text"
+                        type="number"
                         required
                         onChange={e => setPrice(e.target.value)}
                     ></Form.Control>
@@ -91,7 +86,6 @@ export default function CreateIcase () {
                     <Form.Control
                         type="number"
                         placeholder="From 1 - 100"
-                        required
                         onChange={e => setDiscount(e.target.value)}
                     ></Form.Control>
                 </Form.Group>             
@@ -99,11 +93,34 @@ export default function CreateIcase () {
                     <Form.Label> Quantity </Form.Label>
                     <Form.Control
                         type="number"
-                        placeholder="Doe"
+                        placeholder="Count in Stock"
                         required
                         onChange={e => setQty(e.target.value)}
                     ></Form.Control>
-                </Form.Group>             
+                </Form.Group>       
+                <Form.Group>
+                    <Form.Label> Iphone Series </Form.Label> <br/>
+                <select 
+                    style = {{
+                        outline: "none",
+                        padding: "5px",
+                        borderRadius: "15px",
+                        background: "#f7fafd",
+                        color: "#333"
+                    }}
+                    onChange={ e => setIphoneSeries(e.target.value) }
+                > 
+                    <option disabled> Select Series </option>
+                    <option value="6-Series">6 Series</option>
+                    <option value="7-Series">7 Series</option>
+                    <option value="8-Series">8 Series</option>
+                    <option value="X-Series">X Series</option>
+                    <option value="11-Series">11 Series</option>
+                    <option value="12-Series">12 Series</option>
+                    <option value="Universal">Universal</option>
+                </select>
+                    
+                </Form.Group>      
                 {
                     isLoading ?
                     <>

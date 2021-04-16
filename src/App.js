@@ -9,6 +9,7 @@ import Login from "./components/Auth/Login.jsx"
 import Register from "./components/Auth/Register.jsx"
 import Home from "./components/pages/Home"
 import RinglightList from "./components/ringlights/RinglightList"
+import IcaseList from "./components/Icases/IcaseList"
 import CreateIcase from "./components/Icases/CreateIcase"
 import CreateRinglight from "./components/ringlights/CreateRinglight"
 import ViewRinglight from "./components/ringlights/ViewRinglight"
@@ -57,8 +58,9 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
-            <Route exact path="/icase/create" component={CreateIcase} />
+            <Route exact path="/icase" component={CreateIcase} />
             <Route exact path="/ringlights" component={RinglightList} />
+            <Route exact path="/icases" component={IcaseList} />
             <Route exact path="/ringlight" component={CreateRinglight} />
             <Route exact path="/ringlight/:id" component={ViewRinglight} />
           </Switch>

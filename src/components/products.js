@@ -6,7 +6,7 @@ import lg2 from "./img/babe2.JPG"
 const products = [
     {
         _id: 1,
-        name: "Airpods Wireless Bluetooth Headphones",
+        name: "Bad Ringlights",
         image: pic,
         description: "The quick brown fox jumps over the lazy dog",
         brand: "Apple",
@@ -18,7 +18,7 @@ const products = [
     },
     {
         _id: 2,
-        name: "Airpods Wireless Bluetooth Headphones",
+        name: "Bad Ringlights",
         image: pic,
         description: "The quick brown fox jumps over the lazy dog",
         brand: "Apple",
@@ -30,8 +30,9 @@ const products = [
     },
     {
         _id: 3,
-        name: "Airpods Wireless Bluetooth Headphones",
-        image: [pic, lg, lg1, lg2],
+        name: "Fresh Ringlight",
+        image: pic,
+        images: [pic, lg, lg1, lg2],
         colors: ["red", "black", "crimson", "teal"],
         description: "The quick brown fox jumps over the lazy dog",
         brand: "Apple",
@@ -43,7 +44,7 @@ const products = [
     },
     {
         _id: 4,
-        name: "Airpods Wireless Bluetooth Headphones",
+        name: "Perfect Ringlights",
         image: pic,
         description: "The quick brown fox jumps over the lazy dog",
         brand: "Apple",
@@ -55,7 +56,7 @@ const products = [
     },
     {
         _id: 5,
-        name: "Airpods Wireless Bluetooth Headphones",
+        name: "Perfect Ringlights",
         image: pic,
         description: "The quick brown fox jumps over the lazy dog",
         brand: "Apple",
@@ -67,7 +68,7 @@ const products = [
     },
     {
         _id: 6,
-        name: "Airpods Wireless Bluetooth Headphones",
+        name: "Perfect Ringlights",
         image: pic,
         description: "The quick brown fox jumps over the lazy dog",
         brand: "Apple",

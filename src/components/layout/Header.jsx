@@ -10,12 +10,8 @@ const Header = () => {
     // const history = useHistory();
     // const match = useRouteMatch()
     const [userDetails, setUserDetails] = useState({})
-    const [userRole, setUserRole] = useState(false)
 
     useEffect(() => {
-        
-        // if (! userData.user) 
-        //     return history.push("/login")
 
         const fetchProfile = async () => {
             let token = userData.token
@@ -33,35 +29,6 @@ const Header = () => {
         localStorage.setItem("auth-token", "")
     };
 
-    // useEffect(() => {
-    //     // console.log(userDetails)
-
-    //     if (userDetails) {
-    //         console.log(userDetails.role)
-    //     let role = userDetails.role
-
-    //     if (role === "boss") {
-    //         console.log(role)
-    //         setUserRole(true)
-    //     } else if (role === "admin") {
-    //         console.log(role)
-    //         setUserRole(true)
-    //     } else {
-    //         setUserRole(false)
-    //     }
-    //     }
-    //     console.log(subids);
-    //     if (subids) {
-    //         if (subids.includes(userDetails.id)) { 
-    //             setEnrolled("true");
-    //         } else {
-    //             setEnrolled("false");
-    //         }
-    //     }contentDetails.subscriberids, userDetails.id
-        
-
-    // }, [])
-
     return <header>
         <Navbar bg="dark" expand="lg" className="color-nav">
         <Navbar.Brand href="#home">City-Wide Stores</Navbar.Brand>
@@ -70,7 +37,7 @@ const Header = () => {
             <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <NavDropdown title="Categories" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Iphone Cases</NavDropdown.Item>
+                <NavDropdown.Item href="/icases">Iphone Cases</NavDropdown.Item>
                 <NavDropdown.Item href="/ringlights">Ringlights</NavDropdown.Item>
                 {
                     userDetails ?
@@ -79,8 +46,9 @@ const Header = () => {
                     {
                         userDetails.role === "boss" || userDetails.role === "admin" ? <>
                     
-                        <NavDropdown.Item href="/icase/create">New I-Case</NavDropdown.Item>
-                        <NavDropdown.Item href="/ringlight">New Ringlight</NavDropdown.Item> </> : null
+                        <NavDropdown.Item href="/icase">New I-Case</NavDropdown.Item>
+                        <NavDropdown.Item href="/ringlight">New Ringlight</NavDropdown.Item>
+                        <NavDropdown.Item href="/users">Participants</NavDropdown.Item> </> : null
                     }
                         
                     </> : null          
@@ -90,7 +58,8 @@ const Header = () => {
                 userDetails ?
                 <NavDropdown title={userDetails.firstName + " " + userDetails.lastName} id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.1">Edit Profile</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.1">Purchased Items</NavDropdown.Item>
+                    <NavDropdown.Item href="#"><BiIcons.BiBell /> Notifications </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action/3.1" onClick={logout}><BiIcons.BiLogOut /> Log out</NavDropdown.Item>
                 </NavDropdown> :

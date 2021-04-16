@@ -3,10 +3,10 @@ import { Row, Col,Card } from "react-bootstrap"
 import products from "../products"
 import "../Misc/misc.css"
 
-const RinglightList = () => {
+const IcaseList = () => {
     return (
         <>
-        <h1 style={{ marginLeft: "30px", paddingTop: "15px" }}> Ringlights </h1>
+        <h1 style={{ marginLeft: "30px", paddingTop: "15px" }}> Iphone Cases </h1>
         <Row style={{ margin: "0 15px" }}>
             {
                 products.map((product) => (
@@ -37,4 +37,4 @@ const RinglightList = () => {
     )
 }
 
-export default RinglightList;
+export default IcaseList;
