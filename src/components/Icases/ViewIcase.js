@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap"
 import * as FaIcons from "react-icons/fa"
 import products from "../products"
 
-const ViewRinglight = ({ match }) => {    
+const ViewIcase = ({ match }) => {    
 
     const [index, setIndex] = useState(0)
     const [cart, setCart] = useState([])
@@ -61,4 +61,4 @@ const ViewRinglight = ({ match }) => {
     )
 }
 
-export default ViewRinglight
+export default ViewIcase

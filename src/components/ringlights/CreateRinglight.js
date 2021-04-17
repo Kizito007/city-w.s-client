@@ -52,7 +52,7 @@ export default function CreateRinglight () {
                 error && <ErrorNotice message={error} clearError={() => setError(undefined)} />
             }
             <Form onSubmit={submit} style={{height: "100vh"}}>
-                <Form.Group controlId="email">
+                <Form.Group controlId="descrp">
                     <Form.Label> Description </Form.Label>
                     <Form.Control
                         type="text"
@@ -60,7 +60,7 @@ export default function CreateRinglight () {
                         onChange={e => setDescrp(e.target.value)}
                     ></Form.Control>
                 </Form.Group>
-                <Form.Group controlId="password">
+                <Form.Group controlId="brand">
                     <Form.Label> Brand </Form.Label>
                     <Form.Control
                         type="text"
@@ -68,7 +68,7 @@ export default function CreateRinglight () {
                         onChange={e => setBrand(e.target.value)}
                     ></Form.Control>
                 </Form.Group>             
-                <Form.Group controlId="passwordCheck">
+                <Form.Group controlId="price">
                     <Form.Label> Price </Form.Label>
                     <Form.Control
                         type="text"
@@ -76,7 +76,7 @@ export default function CreateRinglight () {
                         onChange={e => setPrice(e.target.value)}
                     ></Form.Control>
                 </Form.Group>             
-                <Form.Group controlId="firstName">
+                <Form.Group controlId="discount">
                     <Form.Label> Discount </Form.Label>
                     <Form.Control
                         type="number"
@@ -84,7 +84,7 @@ export default function CreateRinglight () {
                         onChange={e => setDiscount(e.target.value)}
                     ></Form.Control>
                 </Form.Group>             
-                <Form.Group controlId="lastName">
+                <Form.Group controlId="qty">
                     <Form.Label> Quantity </Form.Label>
                     <Form.Control
                         type="number"

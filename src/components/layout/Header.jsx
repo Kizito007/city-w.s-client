@@ -68,7 +68,7 @@ const Header = () => {
                     <NavDropdown.Item href="/register"><BiIcons.BiLogInCircle /> Sign Up</NavDropdown.Item>
                 </NavDropdown>
             }
-            <Nav.Link href="#home"> <i> <FaIcons.FaCartPlus/> </i> Cart</Nav.Link>
+            <Nav.Link href="#home"> <i> <FaIcons.FaCartPlus/> </i> Cart </Nav.Link>
             </Nav>
         </Navbar.Collapse>
         </Navbar>
